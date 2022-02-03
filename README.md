@@ -64,7 +64,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	// aio on Linux require I/O to be 512-byte aligned
+	// aio on Linux requires I/O to be 512-byte aligned
 	// AllocBuf make and align byte array
 	buf := asyncfs.AllocBuf(4096)
 	defer asyncfs.ReleaseBuf(buf)
